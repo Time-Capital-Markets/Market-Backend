@@ -1,0 +1,595 @@
+{
+  "trades": [
+    {
+      "id": "1042871",
+      "product": "FXNDF",
+      "productDef": "FXNDF USD/BRL",
+      "underlying": "USD/BRL",
+      "direction": "Buy",
+      "cpty": "CORPEX",
+      "po": "EXEMPLO",
+      "book": "NDF_CORP",
+      "notional": 5000000,
+      "ccy": "USD",
+      "rate": 5.412,
+      "tradeDate": "2026-10-01",
+      "fixingDate": "2026-11-19",
+      "settleDate": "2026-11-20",
+      "fixingSource": "PTAX800 venda D-1",
+      "settleCcy": "BRL",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "ana.lima",
+      "audit": [
+        {
+          "at": "2026-10-01T10:01:10",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-10-01T10:02:00",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-10-01T10:05:31",
+          "user": "ana.lima",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED",
+          "note": "Autorizado por segundo usuário com SDI compatível"
+        },
+        {
+          "at": "2026-10-01T10:05:32",
+          "user": "TransferEngine",
+          "action": "TRANSFER",
+          "note": "TR-88231 criada após VERIFIED com SDI-331"
+        }
+      ],
+      "sdi": "SDI-331"
+    },
+    {
+      "id": "1042902",
+      "product": "FXNDF",
+      "productDef": "FXNDF USD/BRL",
+      "underlying": "USD/BRL",
+      "direction": "Sell",
+      "cpty": "ALFA",
+      "po": "EXEMPLO",
+      "book": "NDF_FIN",
+      "notional": 2500000,
+      "ccy": "USD",
+      "rate": 5.388,
+      "tradeDate": "2026-10-06",
+      "fixingDate": "2026-11-04",
+      "settleDate": "2026-11-05",
+      "fixingSource": "PTAX800 venda D-1",
+      "settleCcy": "BRL",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "mcosta",
+      "audit": [
+        {
+          "at": "2026-10-06T14:19:40",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-10-06T14:20:11",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-10-06T14:41:02",
+          "user": "mcosta",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "1042935",
+      "product": "Swap",
+      "productDef": "Swap CDI x PRE",
+      "underlying": "CDI x PRE",
+      "direction": "Receive Fixed",
+      "cpty": "HORIZ",
+      "po": "EXEMPLO",
+      "book": "SWAP_TES",
+      "notional": 50000000,
+      "ccy": "BRL",
+      "rate": 13.85,
+      "tradeDate": "2026-09-22",
+      "fixingDate": "",
+      "settleDate": "2028-01-03",
+      "fixingSource": "CDI B3",
+      "settleCcy": "BRL",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "mcosta",
+      "audit": [
+        {
+          "at": "2026-09-22T11:09:02",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-09-22T11:10:45",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-09-22T11:32:09",
+          "user": "mcosta",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        },
+        {
+          "at": "2026-10-13T16:48:20",
+          "user": "jsilva",
+          "action": "AMEND_BLOCKED",
+          "note": "Compliance: trade date em período fechado",
+          "changes": [
+            {
+              "field": "rate",
+              "before": "13,85",
+              "after": "13,90"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1042960",
+      "product": "FXOption",
+      "productDef": "FXOption USD/BRL",
+      "underlying": "USD/BRL Call",
+      "direction": "Buy",
+      "cpty": "CORPEX",
+      "po": "EXEMPLO",
+      "book": "OPC_FX",
+      "notional": 1000000,
+      "ccy": "USD",
+      "rate": 5.6,
+      "tradeDate": "2026-10-13",
+      "fixingDate": "2026-12-17",
+      "settleDate": "2026-12-18",
+      "fixingSource": "PTAX800 venda D-1",
+      "settleCcy": "BRL",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "ana.lima",
+      "audit": [
+        {
+          "at": "2026-10-13T16:04:02",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING",
+          "note": "Strike 5,6000 · prêmio 0,0812"
+        },
+        {
+          "at": "2026-10-13T16:05:20",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-10-14T08:45:00",
+          "user": "ana.lima",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "1042988",
+      "product": "FXNDF",
+      "productDef": "FXNDF BRL/USD",
+      "underlying": "BRL/USD",
+      "direction": "Buy",
+      "cpty": "TECH",
+      "po": "EXEMPLO",
+      "book": "NDF_CORP",
+      "notional": 1200000,
+      "ccy": "BRL",
+      "rate": 0.1848,
+      "tradeDate": "2026-10-13",
+      "fixingDate": "2027-01-12",
+      "settleDate": "2027-01-13",
+      "fixingSource": "FX.BRL.USD.SPOT",
+      "settleCcy": "USD",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "ana.lima",
+      "audit": [
+        {
+          "at": "2026-10-13T17:39:10",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-10-13T17:40:02",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-10-14T08:30:00",
+          "user": "ana.lima",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "1043004",
+      "product": "Swap",
+      "productDef": "Swap CDI x USD",
+      "underlying": "CDI x USD",
+      "direction": "Pay Fixed",
+      "cpty": "ALFA",
+      "po": "EXEMPLO",
+      "book": "SWAP_TES",
+      "notional": 20000000,
+      "ccy": "BRL",
+      "rate": 4.92,
+      "tradeDate": "2026-10-14",
+      "fixingDate": "",
+      "settleDate": "2027-04-01",
+      "fixingSource": "CDI B3 · PTAX800",
+      "settleCcy": "BRL",
+      "status": "PRICING",
+      "enteredBy": "jsilva",
+      "authorizedBy": "",
+      "audit": [
+        {
+          "at": "2026-10-14T09:12:40",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING",
+          "note": "Cupom cambial 4,92% a.a."
+        }
+      ]
+    },
+    {
+      "id": "1043020",
+      "product": "FXNDF",
+      "productDef": "FXNDF USD/BRL",
+      "underlying": "USD/BRL",
+      "direction": "Buy",
+      "cpty": "EXEMPLO_KY",
+      "po": "EXEMPLO",
+      "book": "NDF_OFF",
+      "notional": 3000000,
+      "ccy": "USD",
+      "rate": 5.35,
+      "tradeDate": "2026-09-29",
+      "fixingDate": "2026-10-13",
+      "settleDate": "2026-10-15",
+      "fixingSource": "PTAX800 venda D-1",
+      "settleCcy": "USD",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "mcosta",
+      "audit": [
+        {
+          "at": "2026-09-29T10:00:00",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING",
+          "note": "Intercompany Banco Exemplo S.A. x Cayman"
+        },
+        {
+          "at": "2026-09-29T10:01:00",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-09-29T10:22:00",
+          "user": "mcosta",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        },
+        {
+          "at": "2026-10-13T13:30:00",
+          "user": "scheduler",
+          "action": "PRICE_FIXING",
+          "note": "PTAX 5,4105 · liquidação USD 33.546,81"
+        }
+      ]
+    },
+    {
+      "id": "1043021",
+      "product": "FXNDF",
+      "productDef": "FXNDF USD/BRL",
+      "underlying": "USD/BRL",
+      "direction": "Sell",
+      "cpty": "EXEMPLO_BS",
+      "po": "EXEMPLO",
+      "book": "NDF_OFF",
+      "notional": 10000000,
+      "ccy": "USD",
+      "rate": 5.3,
+      "tradeDate": "2026-09-30",
+      "fixingDate": "2026-10-13",
+      "settleDate": "2026-10-15",
+      "fixingSource": "PTAX800 venda D-1",
+      "settleCcy": "USD",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "mcosta",
+      "audit": [
+        {
+          "at": "2026-09-30T15:00:00",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING",
+          "note": "Intercompany Banco Exemplo S.A. x Bahamas"
+        },
+        {
+          "at": "2026-09-30T15:01:00",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-09-30T15:40:00",
+          "user": "mcosta",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        },
+        {
+          "at": "2026-10-13T13:30:00",
+          "user": "scheduler",
+          "action": "PRICE_FIXING",
+          "note": "PTAX 5,4105 · liquidação USD 204.232,51"
+        }
+      ]
+    },
+    {
+      "id": "1042850",
+      "product": "FXNDF",
+      "productDef": "FXNDF USD/BRL",
+      "underlying": "USD/BRL",
+      "direction": "Sell",
+      "cpty": "TECH",
+      "po": "EXEMPLO",
+      "book": "NDF_CORP",
+      "notional": 800000,
+      "ccy": "USD",
+      "rate": 5.301,
+      "tradeDate": "2026-09-10",
+      "fixingDate": "2026-10-08",
+      "settleDate": "2026-10-09",
+      "fixingSource": "PTAX800 venda D-1",
+      "settleCcy": "BRL",
+      "status": "MATURED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "mcosta",
+      "audit": [
+        {
+          "at": "2026-09-10T09:59:00",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-09-10T10:00:00",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-09-10T10:20:00",
+          "user": "mcosta",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        },
+        {
+          "at": "2026-10-08T13:30:00",
+          "user": "scheduler",
+          "action": "PRICE_FIXING",
+          "note": "PTAX 5,3442"
+        },
+        {
+          "at": "2026-10-09T15:02:00",
+          "user": "ana.lima",
+          "action": "MATURE",
+          "from": "VERIFIED",
+          "to": "MATURED"
+        }
+      ]
+    },
+    {
+      "id": "1042777",
+      "product": "Swap",
+      "productDef": "Swap CDI x PRE",
+      "underlying": "CDI x PRE",
+      "direction": "Pay Fixed",
+      "cpty": "ALFA",
+      "po": "EXEMPLO",
+      "book": "SWAP_TES",
+      "notional": 15000000,
+      "ccy": "BRL",
+      "rate": 14.1,
+      "tradeDate": "2026-09-29",
+      "fixingDate": "",
+      "settleDate": "2027-07-01",
+      "fixingSource": "CDI B3",
+      "settleCcy": "BRL",
+      "status": "CANCELED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "",
+      "audit": [
+        {
+          "at": "2026-09-29T14:58:00",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-09-29T15:30:00",
+          "user": "jsilva",
+          "action": "CANCEL",
+          "from": "PRICING",
+          "to": "CANCELED",
+          "note": "Taxa digitada errada"
+        }
+      ]
+    },
+    {
+      "id": "1043031",
+      "product": "Swap",
+      "productDef": "Swap CASH BRL",
+      "underlying": "CDI x PRE",
+      "direction": "Receive Fixed",
+      "cpty": "CORPEX",
+      "po": "EXEMPLO",
+      "book": "SWAP_CASH",
+      "notional": 1000000,
+      "ccy": "BRL",
+      "rate": 13.85,
+      "tradeDate": "2026-10-13",
+      "fixingDate": "",
+      "settleDate": "2026-10-14",
+      "fixingSource": "CDI B3",
+      "settleCcy": "BRL",
+      "settlementMethod": "CETIP",
+      "status": "VERIFIED",
+      "enteredBy": "jsilva",
+      "authorizedBy": "ana.lima",
+      "sdi": "SDI-401",
+      "cashflows": [
+        {
+          "id": "CF-1043031-1",
+          "type": "RECEIPT",
+          "amount": 10000,
+          "ccy": "BRL",
+          "date": "2026-10-14"
+        }
+      ],
+      "audit": [
+        {
+          "at": "2026-10-13T09:00:00",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-10-13T09:01:00",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-10-13T09:05:00",
+          "user": "ana.lima",
+          "action": "AUTHORIZE",
+          "from": "PENDING",
+          "to": "VERIFIED"
+        },
+        {
+          "at": "2026-10-13T09:05:01",
+          "user": "TransferEngine",
+          "action": "TRANSFER",
+          "note": "TR-88490 criada após VERIFIED com SDI-401"
+        },
+        {
+          "at": "2026-10-14T09:00:00",
+          "user": "ana.lima",
+          "action": "SETTLE",
+          "note": "TR-88490 liquidada: BRL 10.000,00"
+        }
+      ]
+    },
+    {
+      "id": "1043032",
+      "product": "FXNDF",
+      "productDef": "FXNDF USD/BRL",
+      "underlying": "USD/BRL",
+      "direction": "Buy",
+      "cpty": "CORPEX",
+      "po": "EXEMPLO",
+      "book": "NDF_CORP",
+      "notional": 1000000,
+      "ccy": "USD",
+      "rate": 5.4,
+      "tradeDate": "2026-10-13",
+      "fixingDate": "2026-10-13",
+      "settleDate": "2026-10-15",
+      "fixingSource": "DEMO.USD.BRL",
+      "settleCcy": "BRL",
+      "settlementMethod": "CETIP",
+      "status": "PENDING",
+      "enteredBy": "jsilva",
+      "authorizedBy": "",
+      "cashflows": [
+        {
+          "id": "CF-1043032-1",
+          "type": "RECEIPT",
+          "amount": 10000,
+          "ccy": "BRL",
+          "date": "2026-10-15",
+          "fixing": 5.41
+        }
+      ],
+      "audit": [
+        {
+          "at": "2026-10-13T15:00:00",
+          "user": "jsilva",
+          "action": "NEW",
+          "from": "NONE",
+          "to": "PRICING"
+        },
+        {
+          "at": "2026-10-13T15:01:00",
+          "user": "jsilva",
+          "action": "EXECUTE",
+          "from": "PRICING",
+          "to": "PENDING"
+        },
+        {
+          "at": "2026-10-14T08:40:10",
+          "user": "ana.lima",
+          "action": "AUTHORIZE_BLOCKED",
+          "note": "Mising SDI"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:8081}
+  shutdown: graceful
+spring:
+  application:
+    name: reference-service
+  lifecycle:
+    timeout-per-shutdown-phase: 110s
+  datasource:
+    url: ${DB_URL:jdbc:h2:file:./data/reference;MODE=PostgreSQL;DB_CLOSE_ON_EXIT=FALSE;WRITE_DELAY=0}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+  flyway:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      group:
+        readiness:
+          include: readinessState,db
+      show-details: never
+app:
+  cors-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200}

@@ -1,0 +1,7 @@
+CREATE DATABASE reference;
+CREATE DATABASE trading;
+CREATE DATABASE settlement;
+CREATE DATABASE workflow;
+CREATE DATABASE marketdata;
+CREATE DATABASE operations;
+CREATE DATABASE reconciliation;

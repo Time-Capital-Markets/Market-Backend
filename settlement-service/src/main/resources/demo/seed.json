@@ -1,0 +1,180 @@
+{
+  "transfers": [
+    {
+      "id": "TR-88231",
+      "trade": "1042871",
+      "type": "PAYMENT",
+      "amount": 0,
+      "estimate": "No fixing",
+      "ccy": "BRL",
+      "valueDate": "2026-11-20",
+      "method": "CETIP",
+      "sdi": "SDI-331",
+      "status": "VERIFIED",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88302",
+      "trade": "1042902",
+      "type": "RECEIPT",
+      "amount": 0,
+      "estimate": "No fixing",
+      "ccy": "BRL",
+      "valueDate": "2026-11-05",
+      "method": "CETIP",
+      "sdi": "SDI-301",
+      "status": "VERIFIED",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88315",
+      "trade": "1042935",
+      "type": "PAYMENT",
+      "amount": 0,
+      "estimate": "No vencimento",
+      "ccy": "BRL",
+      "valueDate": "2028-01-03",
+      "method": "B3",
+      "sdi": "SDI-320",
+      "status": "VERIFIED",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88190",
+      "trade": "1042850",
+      "type": "RECEIPT",
+      "amount": 34640,
+      "estimate": "",
+      "ccy": "BRL",
+      "valueDate": "2026-10-09",
+      "method": "CETIP",
+      "sdi": "SDI-310",
+      "status": "SETTLED",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88340",
+      "trade": "1042902",
+      "type": "FEE",
+      "amount": 1850,
+      "estimate": "",
+      "ccy": "BRL",
+      "valueDate": "2026-10-14",
+      "method": "CETIP",
+      "sdi": "SDI-301",
+      "status": "VERIFIED",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88341",
+      "trade": "1042935",
+      "type": "FEE",
+      "amount": 2275.4,
+      "estimate": "",
+      "ccy": "BRL",
+      "valueDate": "2026-10-15",
+      "method": "B3",
+      "sdi": "SDI-320",
+      "status": "VERIFIED",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88350",
+      "trade": "1043020",
+      "type": "RECEIPT",
+      "amount": 33546.81,
+      "estimate": "",
+      "ccy": "USD",
+      "valueDate": "2026-10-15",
+      "method": "SWIFT",
+      "sdi": "SDI-350",
+      "status": "PENDING",
+      "needs4Eyes": false,
+      "approvals": []
+    },
+    {
+      "id": "TR-88355",
+      "trade": "1043021",
+      "type": "PAYMENT",
+      "amount": 204232.51,
+      "estimate": "",
+      "ccy": "USD",
+      "valueDate": "2026-10-15",
+      "method": "SWIFT",
+      "sdi": "SDI-355",
+      "status": "PENDING",
+      "needs4Eyes": true,
+      "approvals": [
+        "mcosta"
+      ]
+    },
+    {
+      "id": "TR-88490",
+      "trade": "1043031",
+      "flowId": "CF-1043031-1",
+      "type": "RECEIPT",
+      "amount": 10000,
+      "estimate": "",
+      "ccy": "BRL",
+      "valueDate": "2026-10-14",
+      "method": "CETIP",
+      "sdi": "SDI-401",
+      "status": "SETTLED",
+      "needs4Eyes": false,
+      "approvals": []
+    }
+  ],
+  "messages": [
+    {
+      "id": "MSG-77088",
+      "trade": "1042871",
+      "type": "CONFIRMATION",
+      "format": "MT300",
+      "to": "CORPEX",
+      "status": "ACKED",
+      "at": "2026-10-01T10:06:10"
+    },
+    {
+      "id": "MSG-77101",
+      "trade": "1042902",
+      "type": "CONFIRMATION",
+      "format": "MT300",
+      "to": "ALFA",
+      "status": "ACKED",
+      "at": "2026-10-06T14:42:00"
+    },
+    {
+      "id": "MSG-77140",
+      "trade": "1042935",
+      "type": "CONFIRMATION",
+      "format": "B3 Registro",
+      "to": "HORIZ",
+      "status": "ACKED",
+      "at": "2026-09-22T11:33:00"
+    },
+    {
+      "id": "MSG-77160",
+      "trade": "1043020",
+      "type": "CONFIRMATION",
+      "format": "MT300",
+      "to": "EXEMPLO_KY",
+      "status": "ACKED",
+      "at": "2026-09-29T10:23:00"
+    },
+    {
+      "id": "MSG-77161",
+      "trade": "1043021",
+      "type": "CONFIRMATION",
+      "format": "MT300",
+      "to": "EXEMPLO_BS",
+      "status": "ACKED",
+      "at": "2026-09-30T15:41:00"
+    }
+  ]
+}

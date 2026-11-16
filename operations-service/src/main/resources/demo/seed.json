@@ -1,0 +1,283 @@
+{
+  "schedules": [
+    {
+      "id": "ST-CHECK-SDI",
+      "name": "Checagem de SDI de CASH dos trades pendentes",
+      "type": "CHECK_SDI",
+      "time": "08:00",
+      "freq": "Business days",
+      "last": "OK",
+      "lastRun": "2026-10-14T08:00:03",
+      "enabled": true
+    },
+    {
+      "id": "ST-VOL",
+      "name": "Import FX vol surface",
+      "type": "QUOTE_IMPORT",
+      "time": "07:30",
+      "freq": "Business days",
+      "last": "ERROR",
+      "lastRun": "2026-10-14T07:31:00",
+      "enabled": true,
+      "error": "Vértice 3M ausente na fonte para 14/10"
+    },
+    {
+      "id": "ST-PTAX",
+      "name": "Import PTAX Bacen",
+      "type": "QUOTE_IMPORT",
+      "time": "13:15",
+      "freq": "Business days",
+      "last": "ERROR",
+      "lastRun": "2026-10-13T13:15:40",
+      "enabled": true,
+      "error": "Cotação BRL/USD não retornada pelo serviço em 13/10"
+    },
+    {
+      "id": "ST-FIXING",
+      "name": "FX NDF fixing",
+      "type": "EOD_FIXING_NDF",
+      "time": "13:30",
+      "freq": "Business days",
+      "last": "OK",
+      "lastRun": "2026-10-13T13:30:12",
+      "enabled": true
+    },
+    {
+      "id": "ST-CUTOFF",
+      "name": "Task cut-off check",
+      "type": "TASK_CUTOFF",
+      "time": "a cada 30 min",
+      "freq": "Contínuo",
+      "last": "OK",
+      "lastRun": "2026-10-14T09:30:00",
+      "enabled": true
+    },
+    {
+      "id": "ST-MTM",
+      "name": "EOD valuation (MTM)",
+      "type": "EOD_VALUATION",
+      "time": "19:00",
+      "freq": "Business days",
+      "last": "OK",
+      "lastRun": "2026-10-13T19:04:51",
+      "enabled": true
+    },
+    {
+      "id": "ST-INV",
+      "name": "EOD inventory e positions",
+      "type": "EOD_INVENTORY",
+      "time": "20:00",
+      "freq": "Business days",
+      "last": "OK",
+      "lastRun": "2026-10-13T20:11:08",
+      "enabled": true
+    }
+  ],
+  "engines": [
+    {
+      "id": "TransferEngine",
+      "label": "Transfer",
+      "desc": "Gera transfers após VERIFIED, com SDI compatível",
+      "status": "RUNNING",
+      "backlog": 0,
+      "rate": [
+        4,
+        6,
+        3,
+        8,
+        5,
+        7,
+        6,
+        9,
+        4,
+        6,
+        5,
+        7
+      ],
+      "config": [
+        "events = PSEventTrade",
+        "filters = VerifiedEventFilter"
+      ]
+    },
+    {
+      "id": "MessageEngine",
+      "label": "Message",
+      "desc": "Gera confirmações e avisos",
+      "status": "RUNNING",
+      "backlog": 0,
+      "rate": [
+        2,
+        3,
+        2,
+        4,
+        3,
+        2,
+        5,
+        3,
+        2,
+        3,
+        4,
+        3
+      ],
+      "config": [
+        "events = PSEventTrade, PSEventTransfer",
+        "filters = VerifiedEventFilter"
+      ]
+    },
+    {
+      "id": "SenderEngine",
+      "label": "Sender",
+      "desc": "Envia mensagens por SWIFT, B3 e e-mail",
+      "status": "RUNNING",
+      "backlog": 2,
+      "rate": [
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "config": [
+        "events = PSEventMessage",
+        "gateways = SWIFT, B3, SMTP"
+      ]
+    },
+    {
+      "id": "TaskEngine",
+      "label": "Task",
+      "desc": "Abre e atualiza tasks da Task Station",
+      "status": "RUNNING",
+      "backlog": 0,
+      "rate": [
+        5,
+        4,
+        6,
+        7,
+        5,
+        6,
+        8,
+        6,
+        5,
+        7,
+        6,
+        8
+      ],
+      "config": [
+        "events = PSEvent*",
+        "rules = TaskStationConfig"
+      ]
+    },
+    {
+      "id": "AccountingEngine",
+      "label": "Accounting",
+      "desc": "Gera BO postings",
+      "status": "RUNNING",
+      "backlog": 0,
+      "rate": [
+        3,
+        3,
+        4,
+        3,
+        2,
+        4,
+        3,
+        5,
+        3,
+        4,
+        3,
+        4
+      ],
+      "config": [
+        "events = PSEventTransfer, PSEventValuation"
+      ]
+    },
+    {
+      "id": "InventoryEngine",
+      "label": "Inventory",
+      "desc": "Atualiza saldos de caixa e títulos",
+      "status": "STOPPED",
+      "backlog": 37,
+      "rate": [
+        3,
+        4,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warn": "Parado desde 09:41. 37 eventos aguardando processamento.",
+      "config": [
+        "events = PSEventTransfer"
+      ]
+    },
+    {
+      "id": "PositionEngine",
+      "label": "Position",
+      "desc": "Mantém positions por book",
+      "status": "RUNNING",
+      "backlog": 0,
+      "rate": [
+        6,
+        5,
+        7,
+        6,
+        8,
+        7,
+        6,
+        7,
+        8,
+        6,
+        7,
+        9
+      ],
+      "config": [
+        "events = PSEventTrade"
+      ]
+    },
+    {
+      "id": "CreEngine",
+      "label": "CRE",
+      "desc": "Cash/realized events para Accounting",
+      "status": "RUNNING",
+      "backlog": 0,
+      "rate": [
+        2,
+        2,
+        3,
+        2,
+        3,
+        2,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      "config": [
+        "events = PSEventTransfer"
+      ]
+    }
+  ],
+  "business-contexts": [
+    {
+      "id": "default",
+      "processDate": "2026-10-14",
+      "lockDate": "2026-09-30",
+      "entityLabel": "Banco Exemplo S.A."
+    }
+  ]
+}

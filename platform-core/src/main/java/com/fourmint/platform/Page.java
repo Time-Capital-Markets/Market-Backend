@@ -1,0 +1,5 @@
+package com.fourmint.platform;
+import java.util.List;
+public record Page<T>(List<T> items, int page, int size, boolean hasNext) {
+    public Page { items = List.copyOf(items); }
+}

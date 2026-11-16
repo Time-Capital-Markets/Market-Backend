@@ -1,0 +1,641 @@
+{
+  "tasks": [
+    {
+      "id": "T-550280",
+      "type": "EX_MISSING_SDI",
+      "kind": "TASK",
+      "object": "1043032",
+      "objectType": "Trade",
+      "trade": "1043032",
+      "status": "NEW",
+      "priority": "HIGH",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-10-14T08:40:12",
+      "cutoff": "17:00",
+      "comment": "",
+      "history": [
+        {
+          "at": "2026-10-14T08:40:12",
+          "user": "TaskEngine",
+          "kind": "CREATED",
+          "text": "AUTHORIZE bloqueado: Missing SDI"
+        }
+      ]
+    },
+    {
+      "id": "T-550102",
+      "type": "TRADE_PENDING",
+      "kind": "TASK",
+      "object": "1042871",
+      "objectType": "Trade",
+      "trade": "1042871",
+      "status": "COMPLETED",
+      "priority": "MEDIUM",
+      "group": "FO_AUTH",
+      "owner": "ana.lima",
+      "created": "2026-10-01T10:02:00",
+      "cutoff": "17:00",
+      "comment": "Autorizado por Ana Lima, diferente do autor do EXECUTE",
+      "history": [
+        {
+          "at": "2026-10-01T10:02:00",
+          "user": "TaskEngine",
+          "kind": "CREATED",
+          "text": "Trade em PENDING"
+        },
+        {
+          "at": "2026-10-01T10:05:31",
+          "user": "ana.lima",
+          "kind": "COMPLETED",
+          "text": "AUTHORIZE por segundo usuário: Ana Lima"
+        }
+      ]
+    },
+    {
+      "id": "T-550215",
+      "type": "TRADE_PENDING",
+      "kind": "TASK",
+      "object": "1042988",
+      "objectType": "Trade",
+      "trade": "1042988",
+      "status": "COMPLETED",
+      "priority": "MEDIUM",
+      "group": "FO_AUTH",
+      "owner": "",
+      "created": "2026-10-13T17:40:03",
+      "cutoff": "17:00",
+      "comment": "FXNDF BRL/USD autorizado",
+      "history": [
+        {
+          "at": "2026-10-13T17:40:03",
+          "user": "TaskEngine",
+          "kind": "CREATED",
+          "text": "Trade em PENDING"
+        },
+        {
+          "at": "2026-10-14T08:30:00",
+          "user": "ana.lima",
+          "kind": "COMPLETED",
+          "text": "AUTHORIZE aplicado"
+        }
+      ]
+    },
+    {
+      "id": "T-550241",
+      "type": "EX_MISSING_PRICE",
+      "kind": "TASK",
+      "object": "BRL/USD Spot 13/10",
+      "objectType": "Quote",
+      "trade": "1042988",
+      "series": "FX.BRL.USD.SPOT",
+      "date": "2026-10-13",
+      "status": "NEW",
+      "priority": "MEDIUM",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-10-14T07:00:12",
+      "cutoff": "11:00",
+      "comment": "Cotação BRL/USD Spot de 13/10 ausente para o MTM",
+      "history": [
+        {
+          "at": "2026-10-14T07:00:12",
+          "user": "scheduler",
+          "kind": "CREATED",
+          "text": "Cotação BRL/USD Spot de 13/10 não encontrada"
+        }
+      ]
+    },
+    {
+      "id": "T-550255",
+      "type": "TRANSFER_PENDING",
+      "kind": "TASK",
+      "object": "TR-88355",
+      "objectType": "Transfer",
+      "trade": "1043021",
+      "status": "NEW",
+      "priority": "HIGH",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-10-13T13:31:12",
+      "cutoff": "15:00",
+      "comment": "4 Eyes: 1ª aprovação de Marina Costa, falta a 2ª",
+      "history": [
+        {
+          "at": "2026-10-13T13:31:12",
+          "user": "TransferEngine",
+          "kind": "CREATED",
+          "text": "Transfer acima do limite exige 4 Eyes"
+        },
+        {
+          "at": "2026-10-13T16:02:00",
+          "user": "mcosta",
+          "kind": "ACTION",
+          "text": "1ª aprovação da liquidação"
+        }
+      ]
+    },
+    {
+      "id": "T-550270",
+      "type": "EX_RETRO_AMEND",
+      "kind": "TASK",
+      "object": "1042935",
+      "objectType": "Trade",
+      "trade": "1042935",
+      "status": "NEW",
+      "priority": "HIGH",
+      "group": "COMPLIANCE",
+      "owner": "",
+      "created": "2026-10-13T16:48:20",
+      "cutoff": "17:30",
+      "comment": "AMEND em trade com trade date 22/09/2026, período fechado até 30/09/2026",
+      "pending": {
+        "changes": [
+          {
+            "field": "rate",
+            "before": "13,85",
+            "after": "13,90"
+          }
+        ],
+        "requestedBy": "jsilva"
+      },
+      "history": [
+        {
+          "at": "2026-10-13T16:48:20",
+          "user": "jsilva",
+          "kind": "BLOCKED",
+          "text": "AMEND bloqueado pela trava de alteração retroativa",
+          "changes": [
+            {
+              "field": "rate",
+              "before": "13,85",
+              "after": "13,90"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-900001",
+      "type": "NOTIFICATION",
+      "kind": "NOTIFICATION",
+      "object": "TR-88190",
+      "objectType": "Transfer",
+      "trade": "1042850",
+      "status": "COMPLETED",
+      "priority": "LOW",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-10-09T15:02:10",
+      "cutoff": "",
+      "comment": "Transfer TR-88190 SETTLED · BRL 34.640,00",
+      "read": true,
+      "history": []
+    },
+    {
+      "id": "N-900002",
+      "type": "NOTIFICATION",
+      "kind": "NOTIFICATION",
+      "object": "ST-MTM",
+      "objectType": "ScheduledTask",
+      "status": "COMPLETED",
+      "priority": "LOW",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-10-13T19:04:51",
+      "cutoff": "",
+      "comment": "Scheduled Task ST-MTM concluída sem erros",
+      "read": false,
+      "history": []
+    },
+    {
+      "id": "N-900003",
+      "type": "NOTIFICATION",
+      "kind": "NOTIFICATION",
+      "object": "MSG-77161",
+      "objectType": "Message",
+      "trade": "1043021",
+      "status": "COMPLETED",
+      "priority": "LOW",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-09-30T15:44:00",
+      "cutoff": "",
+      "comment": "ACK recebido de BANCO EXEMPLO BAHAMAS LTD",
+      "read": true,
+      "history": []
+    },
+    {
+      "id": "T-550281",
+      "type": "TRADE_PENDING",
+      "kind": "TASK",
+      "object": "1043032",
+      "objectType": "Trade",
+      "trade": "1043032",
+      "status": "NEW",
+      "priority": "MEDIUM",
+      "group": "FO_AUTH",
+      "owner": "",
+      "created": "2026-10-13T15:01:00",
+      "cutoff": "17:00",
+      "comment": "FXNDF aguardando SDI e AUTHORIZE",
+      "history": []
+    },
+    {
+      "id": "T-550283",
+      "type": "TRADE_PENDING",
+      "kind": "TASK",
+      "object": "1042988",
+      "objectType": "Trade",
+      "trade": "1042988",
+      "status": "NEW",
+      "priority": "LOW",
+      "group": "BO_SETTLE",
+      "owner": "",
+      "created": "2026-10-14T09:01:00",
+      "cutoff": "21:00",
+      "comment": "Conferência para o próximo turno",
+      "history": []
+    }
+  ],
+  "sla-weeks": [
+    {
+      "id": "W34",
+      "week": "W34",
+      "start": "2026-08-17",
+      "breaches": {
+        "EX_MISSING_SDI": 3,
+        "EX_INVALID_SDI": 1,
+        "EX_MISSING_PRICE": 2,
+        "TRADE_PENDING": 1,
+        "TRANSFER_PENDING": 0,
+        "EX_MISSING_PRODUCT": 0,
+        "EX_RETRO_AMEND": 0,
+        "MSG_ACK_PENDING": 1
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 180,
+        "EX_INVALID_SDI": 185,
+        "EX_MISSING_PRICE": 82,
+        "TRADE_PENDING": 64,
+        "TRANSFER_PENDING": 109,
+        "EX_MISSING_PRODUCT": 240,
+        "EX_RETRO_AMEND": 264,
+        "MSG_ACK_PENDING": 150
+      },
+      "total": {
+        "EX_MISSING_SDI": 10,
+        "EX_INVALID_SDI": 7,
+        "EX_MISSING_PRICE": 10,
+        "TRADE_PENDING": 6,
+        "TRANSFER_PENDING": 5,
+        "EX_MISSING_PRODUCT": 6,
+        "EX_RETRO_AMEND": 4,
+        "MSG_ACK_PENDING": 7
+      }
+    },
+    {
+      "id": "W35",
+      "week": "W35",
+      "start": "2026-08-24",
+      "breaches": {
+        "EX_MISSING_SDI": 4,
+        "EX_INVALID_SDI": 0,
+        "EX_MISSING_PRICE": 1,
+        "TRADE_PENDING": 2,
+        "TRANSFER_PENDING": 1,
+        "EX_MISSING_PRODUCT": 0,
+        "EX_RETRO_AMEND": 1,
+        "MSG_ACK_PENDING": 1
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 191,
+        "EX_INVALID_SDI": 194,
+        "EX_MISSING_PRICE": 86,
+        "TRADE_PENDING": 67,
+        "TRANSFER_PENDING": 115,
+        "EX_MISSING_PRODUCT": 252,
+        "EX_RETRO_AMEND": 279,
+        "MSG_ACK_PENDING": 158
+      },
+      "total": {
+        "EX_MISSING_SDI": 13,
+        "EX_INVALID_SDI": 6,
+        "EX_MISSING_PRICE": 6,
+        "TRADE_PENDING": 9,
+        "TRANSFER_PENDING": 8,
+        "EX_MISSING_PRODUCT": 4,
+        "EX_RETRO_AMEND": 7,
+        "MSG_ACK_PENDING": 8
+      }
+    },
+    {
+      "id": "W36",
+      "week": "W36",
+      "start": "2026-08-31",
+      "breaches": {
+        "EX_MISSING_SDI": 2,
+        "EX_INVALID_SDI": 1,
+        "EX_MISSING_PRICE": 3,
+        "TRADE_PENDING": 1,
+        "TRANSFER_PENDING": 0,
+        "EX_MISSING_PRODUCT": 1,
+        "EX_RETRO_AMEND": 0,
+        "MSG_ACK_PENDING": 2
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 201,
+        "EX_INVALID_SDI": 204,
+        "EX_MISSING_PRICE": 91,
+        "TRADE_PENDING": 70,
+        "TRANSFER_PENDING": 122,
+        "EX_MISSING_PRODUCT": 264,
+        "EX_RETRO_AMEND": 295,
+        "MSG_ACK_PENDING": 165
+      },
+      "total": {
+        "EX_MISSING_SDI": 10,
+        "EX_INVALID_SDI": 6,
+        "EX_MISSING_PRICE": 11,
+        "TRADE_PENDING": 8,
+        "TRANSFER_PENDING": 4,
+        "EX_MISSING_PRODUCT": 7,
+        "EX_RETRO_AMEND": 6,
+        "MSG_ACK_PENDING": 8
+      }
+    },
+    {
+      "id": "W37",
+      "week": "W37",
+      "start": "2026-09-07",
+      "breaches": {
+        "EX_MISSING_SDI": 5,
+        "EX_INVALID_SDI": 1,
+        "EX_MISSING_PRICE": 2,
+        "TRADE_PENDING": 0,
+        "TRANSFER_PENDING": 1,
+        "EX_MISSING_PRODUCT": 0,
+        "EX_RETRO_AMEND": 0,
+        "MSG_ACK_PENDING": 1
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 212,
+        "EX_INVALID_SDI": 157,
+        "EX_MISSING_PRICE": 96,
+        "TRADE_PENDING": 54,
+        "TRANSFER_PENDING": 128,
+        "EX_MISSING_PRODUCT": 204,
+        "EX_RETRO_AMEND": 310,
+        "MSG_ACK_PENDING": 128
+      },
+      "total": {
+        "EX_MISSING_SDI": 14,
+        "EX_INVALID_SDI": 7,
+        "EX_MISSING_PRICE": 10,
+        "TRADE_PENDING": 4,
+        "TRANSFER_PENDING": 7,
+        "EX_MISSING_PRODUCT": 6,
+        "EX_RETRO_AMEND": 4,
+        "MSG_ACK_PENDING": 7
+      }
+    },
+    {
+      "id": "W38",
+      "week": "W38",
+      "start": "2026-09-14",
+      "breaches": {
+        "EX_MISSING_SDI": 3,
+        "EX_INVALID_SDI": 2,
+        "EX_MISSING_PRICE": 1,
+        "TRADE_PENDING": 1,
+        "TRANSFER_PENDING": 2,
+        "EX_MISSING_PRODUCT": 0,
+        "EX_RETRO_AMEND": 1,
+        "MSG_ACK_PENDING": 0
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 223,
+        "EX_INVALID_SDI": 167,
+        "EX_MISSING_PRICE": 101,
+        "TRADE_PENDING": 58,
+        "TRANSFER_PENDING": 134,
+        "EX_MISSING_PRODUCT": 216,
+        "EX_RETRO_AMEND": 326,
+        "MSG_ACK_PENDING": 135
+      },
+      "total": {
+        "EX_MISSING_SDI": 11,
+        "EX_INVALID_SDI": 10,
+        "EX_MISSING_PRICE": 6,
+        "TRADE_PENDING": 7,
+        "TRANSFER_PENDING": 10,
+        "EX_MISSING_PRODUCT": 4,
+        "EX_RETRO_AMEND": 7,
+        "MSG_ACK_PENDING": 6
+      }
+    },
+    {
+      "id": "W39",
+      "week": "W39",
+      "start": "2026-09-21",
+      "breaches": {
+        "EX_MISSING_SDI": 4,
+        "EX_INVALID_SDI": 1,
+        "EX_MISSING_PRICE": 2,
+        "TRADE_PENDING": 2,
+        "TRANSFER_PENDING": 1,
+        "EX_MISSING_PRODUCT": 1,
+        "EX_RETRO_AMEND": 0,
+        "MSG_ACK_PENDING": 1
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 233,
+        "EX_INVALID_SDI": 176,
+        "EX_MISSING_PRICE": 106,
+        "TRADE_PENDING": 61,
+        "TRANSFER_PENDING": 141,
+        "EX_MISSING_PRODUCT": 228,
+        "EX_RETRO_AMEND": 341,
+        "MSG_ACK_PENDING": 143
+      },
+      "total": {
+        "EX_MISSING_SDI": 14,
+        "EX_INVALID_SDI": 6,
+        "EX_MISSING_PRICE": 9,
+        "TRADE_PENDING": 10,
+        "TRANSFER_PENDING": 6,
+        "EX_MISSING_PRODUCT": 7,
+        "EX_RETRO_AMEND": 6,
+        "MSG_ACK_PENDING": 6
+      }
+    },
+    {
+      "id": "W40",
+      "week": "W40",
+      "start": "2026-09-28",
+      "breaches": {
+        "EX_MISSING_SDI": 6,
+        "EX_INVALID_SDI": 1,
+        "EX_MISSING_PRICE": 3,
+        "TRADE_PENDING": 1,
+        "TRANSFER_PENDING": 1,
+        "EX_MISSING_PRODUCT": 0,
+        "EX_RETRO_AMEND": 1,
+        "MSG_ACK_PENDING": 2
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 180,
+        "EX_INVALID_SDI": 185,
+        "EX_MISSING_PRICE": 82,
+        "TRADE_PENDING": 64,
+        "TRANSFER_PENDING": 109,
+        "EX_MISSING_PRODUCT": 240,
+        "EX_RETRO_AMEND": 264,
+        "MSG_ACK_PENDING": 150
+      },
+      "total": {
+        "EX_MISSING_SDI": 16,
+        "EX_INVALID_SDI": 7,
+        "EX_MISSING_PRICE": 12,
+        "TRADE_PENDING": 6,
+        "TRANSFER_PENDING": 7,
+        "EX_MISSING_PRODUCT": 6,
+        "EX_RETRO_AMEND": 6,
+        "MSG_ACK_PENDING": 9
+      }
+    },
+    {
+      "id": "W41",
+      "week": "W41",
+      "start": "2026-10-05",
+      "breaches": {
+        "EX_MISSING_SDI": 5,
+        "EX_INVALID_SDI": 2,
+        "EX_MISSING_PRICE": 2,
+        "TRADE_PENDING": 1,
+        "TRANSFER_PENDING": 2,
+        "EX_MISSING_PRODUCT": 1,
+        "EX_RETRO_AMEND": 0,
+        "MSG_ACK_PENDING": 1
+      },
+      "resolvedMin": {
+        "EX_MISSING_SDI": 191,
+        "EX_INVALID_SDI": 194,
+        "EX_MISSING_PRICE": 86,
+        "TRADE_PENDING": 67,
+        "TRANSFER_PENDING": 115,
+        "EX_MISSING_PRODUCT": 252,
+        "EX_RETRO_AMEND": 279,
+        "MSG_ACK_PENDING": 158
+      },
+      "total": {
+        "EX_MISSING_SDI": 15,
+        "EX_INVALID_SDI": 10,
+        "EX_MISSING_PRICE": 8,
+        "TRADE_PENDING": 7,
+        "TRANSFER_PENDING": 10,
+        "EX_MISSING_PRODUCT": 6,
+        "EX_RETRO_AMEND": 5,
+        "MSG_ACK_PENDING": 8
+      }
+    }
+  ],
+  "support-cases": [
+    {
+      "id": "SF-000431",
+      "subject": "Atrasos na distribuição de preços pelo Market Data Service",
+      "category": "Incident",
+      "status": "Resolved",
+      "priority": "High",
+      "service": "Market Data Service",
+      "openedAt": "2026-09-28",
+      "closedAt": "2026-10-09",
+      "taskTypes": [
+        "EX_MISSING_PRICE"
+      ],
+      "description": "Intermitência na distribuição de cotações de FX e curvas para os consumidores. Filas de publicação atrasaram preços de fechamento, com relatos de Missing Price no back office. O incidente não contém os IDs das tasks nem comprova quantas quebras de SLA foram causadas por ele.",
+      "resolution": "Reprocessamento das filas e ajuste do monitoramento de latência. Conferir timestamp de publicação, série, consumidor e data de cada task para confirmar o impacto."
+    },
+    {
+      "id": "SF-000392",
+      "subject": "Falha temporária de ingestão de preços de câmbio",
+      "category": "Incident",
+      "status": "Closed",
+      "priority": "High",
+      "service": "Market Data Service",
+      "openedAt": "2026-08-31",
+      "closedAt": "2026-09-02",
+      "taskTypes": [
+        "EX_MISSING_PRICE"
+      ],
+      "description": "Timeout no recebimento do feed de câmbio. Preços ficaram indisponíveis até o reenvio do fornecedor. Houve relatos de tasks de Missing Price, sem vínculo individual registrado.",
+      "resolution": "Feed reenviado. Investigar recorrência e comparar horários de distribuição com a criação das tasks."
+    },
+    {
+      "id": "SF-000447",
+      "subject": "Recorrência de dúvidas no cadastro e abrangência de SDIs",
+      "category": "Training",
+      "status": "Planned",
+      "priority": "Medium",
+      "service": "Back Office Enablement",
+      "openedAt": "2026-08-24",
+      "closedAt": null,
+      "taskTypes": [
+        "EX_MISSING_SDI",
+        "EX_INVALID_SDI"
+      ],
+      "description": "Chamados de suporte repetem dúvidas sobre produto, moeda, método, vigência e conta da SDI. Solicitação de workshop e checklist de conferência para operadores. A recorrência sugere oportunidade de capacitação; não mede a competência de uma pessoa nem exclui falhas cadastrais ou sistêmicas.",
+      "resolution": "Proposta de treinamento por tema com exemplos de SDI e acompanhamento da taxa de reincidência. Validar amostra de tasks e separar erro de processo de indisponibilidade técnica."
+    },
+    {
+      "id": "SF-000455",
+      "subject": "Dúvidas recorrentes sobre configuração de novos produtos",
+      "category": "Question",
+      "status": "Closed",
+      "priority": "Medium",
+      "service": "Product Support",
+      "openedAt": "2026-09-14",
+      "closedAt": "2026-09-18",
+      "taskTypes": [
+        "EX_MISSING_PRODUCT"
+      ],
+      "description": "Suporte orientou o uso do PricerConfig e a conferência do cadastro antes do EXECUTE. Há pedido de material de apoio para novos produtos.",
+      "resolution": "Checklist disponibilizado. Avaliar capacitação apenas se a amostra de pendências confirmar recorrência do mesmo erro."
+    },
+    {
+      "id": "SF-000468",
+      "subject": "Atraso de publicação de preços FX no Market Data Service",
+      "category": "Incident",
+      "status": "Investigating",
+      "priority": "High",
+      "service": "Market Data Service",
+      "openedAt": "2026-10-13",
+      "closedAt": null,
+      "taskTypes": [
+        "EX_MISSING_PRICE"
+      ],
+      "series": [
+        "FX.BRL.USD.SPOT",
+        "PTAX.USD",
+        "PTAX.EUR"
+      ],
+      "description": "Em 13 e 14 de outubro, consumidores reportaram ausência de preços FX de fechamento e timeout no recebimento da distribuição. O chamado está sob investigação. Não há IDs de tasks individuais vinculados nem confirmação de impacto por série e consumidor.",
+      "resolution": "Equipe de Market Data investigando latência e fila de distribuição. Cruzar a série e a data requerida com os logs da ST e os timestamps de publicação antes de confirmar a causa; não executar reprocessamento sem revisão do operador."
+    },
+    {
+      "id": "SF-000099",
+      "subject": "Incidente antigo de preços fora do período",
+      "category": "Incident",
+      "status": "Closed",
+      "priority": "Low",
+      "service": "Market Data Service",
+      "openedAt": "2026-04-01",
+      "closedAt": "2026-04-02",
+      "taskTypes": [
+        "EX_MISSING_PRICE"
+      ],
+      "description": "Atraso de um feed em abril, sem continuidade após resolução.",
+      "resolution": "Encerrado em abril."
+    }
+  ]
+}

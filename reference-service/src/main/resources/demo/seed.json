@@ -1,0 +1,383 @@
+{
+  "users": [
+    {
+      "id": "ana.lima",
+      "name": "Ana Lima",
+      "role": "Back Office",
+      "group": "BO_SETTLE",
+      "initials": "AL"
+    },
+    {
+      "id": "jsilva",
+      "name": "João Silva",
+      "role": "Front Office",
+      "group": "FO_DERIV",
+      "initials": "JS"
+    },
+    {
+      "id": "mcosta",
+      "name": "Marina Costa",
+      "role": "Middle Office · Compliance",
+      "group": "COMPLIANCE",
+      "initials": "MC",
+      "compliance": true
+    }
+  ],
+  "entities": [
+    {
+      "id": "EXEMPLO",
+      "name": "BANCO EXEMPLO S.A.",
+      "role": "ProcessingOrg",
+      "country": "BR",
+      "doc": "00.000.000/0001-00"
+    },
+    {
+      "id": "EXEMPLO_KY",
+      "name": "BANCO EXEMPLO CAYMAN LTD",
+      "role": "ProcessingOrg",
+      "country": "KY",
+      "doc": "KY-REG 000123"
+    },
+    {
+      "id": "EXEMPLO_BS",
+      "name": "BANCO EXEMPLO BAHAMAS LTD",
+      "role": "ProcessingOrg",
+      "country": "BS",
+      "doc": "BS-REG 004567"
+    },
+    {
+      "id": "CORPEX",
+      "name": "CORP EXEMPLO LTDA",
+      "role": "CounterParty",
+      "country": "BR",
+      "doc": "11.111.111/0001-11"
+    },
+    {
+      "id": "ALFA",
+      "name": "BANCO ALFA S.A.",
+      "role": "CounterParty",
+      "country": "BR",
+      "doc": "22.222.222/0001-22"
+    },
+    {
+      "id": "HORIZ",
+      "name": "FUNDO HORIZONTE FIM",
+      "role": "CounterParty",
+      "country": "BR",
+      "doc": "33.333.333/0001-33"
+    },
+    {
+      "id": "TECH",
+      "name": "TECH BRASIL S.A.",
+      "role": "CounterParty",
+      "country": "BR",
+      "doc": "44.444.444/0001-44"
+    }
+  ],
+  "sdis": [
+    {
+      "id": "SDI-301",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "ALFA",
+      "ccy": "BRL",
+      "method": "CETIP",
+      "account": "CETIP 1234.56-7",
+      "status": "Active",
+      "products": [
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-302",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "ALFA",
+      "ccy": "USD",
+      "method": "SWIFT",
+      "account": "ALFABRSP · 001-998877",
+      "status": "Active",
+      "products": [
+        "FX",
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-310",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "TECH",
+      "ccy": "BRL",
+      "method": "CETIP",
+      "account": "CETIP 7788.90-1",
+      "status": "Active",
+      "products": [
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-311",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "TECH",
+      "ccy": "EUR",
+      "method": "SWIFT",
+      "account": "TECHBRSP · DE89 3704",
+      "status": "Active",
+      "products": [
+        "FX",
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-320",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "HORIZ",
+      "ccy": "BRL",
+      "method": "B3",
+      "account": "B3 Clearing 4455",
+      "status": "Active",
+      "products": [
+        "Swap"
+      ]
+    },
+    {
+      "id": "SDI-330",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "CORPEX",
+      "ccy": "USD",
+      "method": "SWIFT",
+      "account": "CORPBRSP · 778-1200",
+      "status": "Active",
+      "products": [
+        "FX",
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-331",
+      "type": "CASH",
+      "validFrom": "2026-11-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "CORPEX",
+      "ccy": "BRL",
+      "method": "CETIP",
+      "account": "CETIP 3344.10-2",
+      "status": "Active",
+      "products": [
+        "FXNDF",
+        "FXOption"
+      ]
+    },
+    {
+      "id": "SDI-350",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "EXEMPLO_KY",
+      "ccy": "USD",
+      "method": "SWIFT",
+      "account": "BEXKKYK1 · 0099-221",
+      "status": "Invalid",
+      "reason": "BIC BEXKKYK1 não encontrado no diretório SWIFT",
+      "products": [
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-355",
+      "type": "CASH",
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": [],
+      "entity": "EXEMPLO_BS",
+      "ccy": "USD",
+      "method": "SWIFT",
+      "account": "BEXBBSNA · 0012-554",
+      "status": "Active",
+      "products": [
+        "FXNDF"
+      ]
+    },
+    {
+      "id": "SDI-332",
+      "type": "CASH",
+      "entity": "CORPEX",
+      "ccy": "BRL",
+      "method": "CETIP",
+      "account": "CETIP OPC 400",
+      "status": "Active",
+      "products": [
+        "FXOption"
+      ],
+      "validFrom": "2026-01-01",
+      "validTo": "2030-12-31",
+      "audit": []
+    },
+    {
+      "id": "SDI-401",
+      "type": "CASH",
+      "entity": "CORPEX",
+      "ccy": "BRL",
+      "method": "CETIP",
+      "account": "CETIP 401",
+      "status": "Active",
+      "products": [
+        "Swap"
+      ],
+      "validFrom": "2026-10-01",
+      "validTo": "2027-12-31",
+      "audit": []
+    }
+  ],
+  "books": [
+    {
+      "id": "NDF_CORP",
+      "desc": "FX NDF corporate",
+      "desk": "FX Corporate",
+      "owner": "jsilva",
+      "po": "EXEMPLO"
+    },
+    {
+      "id": "NDF_FIN",
+      "desc": "FX NDF institucional",
+      "desk": "FX Institucional",
+      "owner": "jsilva",
+      "po": "EXEMPLO"
+    },
+    {
+      "id": "NDF_OFF",
+      "desc": "FX NDF intercompany offshore",
+      "desk": "FX Offshore",
+      "owner": "jsilva",
+      "po": "EXEMPLO"
+    },
+    {
+      "id": "SWAP_TES",
+      "desc": "Swaps tesouraria",
+      "desk": "Rates",
+      "owner": "jsilva",
+      "po": "EXEMPLO"
+    },
+    {
+      "id": "OPC_FX",
+      "desc": "FX Options",
+      "desk": "FX Options",
+      "owner": "jsilva",
+      "po": "EXEMPLO"
+    },
+    {
+      "id": "SWAP_CASH",
+      "desc": "Swaps com liquidação CASH via CETIP",
+      "desk": "Rates",
+      "owner": "jsilva",
+      "po": "EXEMPLO"
+    }
+  ],
+  "products": [
+    {
+      "id": "FXNDF USD/BRL",
+      "type": "FXNDF",
+      "pricer": "PricerFXNDF",
+      "calendar": "BRL",
+      "settlement": "Cash"
+    },
+    {
+      "id": "FXNDF EUR/BRL",
+      "type": "FXNDF",
+      "pricer": "PricerFXNDF",
+      "calendar": "BRL",
+      "settlement": "Cash"
+    },
+    {
+      "id": "FXOption USD/BRL",
+      "type": "FXOption",
+      "pricer": "PricerFXOptionVanilla",
+      "calendar": "BRL",
+      "settlement": "Cash"
+    },
+    {
+      "id": "Swap CDI x PRE",
+      "type": "Swap",
+      "pricer": "PricerSwap",
+      "calendar": "BRL",
+      "settlement": "B3"
+    },
+    {
+      "id": "Swap CDI x USD",
+      "type": "Swap",
+      "pricer": "PricerSwapCrossCurrency",
+      "calendar": "BRL,USD",
+      "settlement": "B3"
+    },
+    {
+      "id": "Swap CASH BRL",
+      "type": "Swap",
+      "pricer": "PricerSwap",
+      "calendar": "BRL",
+      "settlement": "Cash"
+    },
+    {
+      "id": "FXNDF BRL/USD",
+      "type": "FXNDF",
+      "pricer": "PricerFXNDF",
+      "calendar": "BRL",
+      "settlement": "Cash"
+    }
+  ],
+  "calendars": [
+    {
+      "id": "BRL",
+      "holidays": [
+        "2026-01-01",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-04-03",
+        "2026-04-21",
+        "2026-05-01",
+        "2026-06-04",
+        "2026-09-07",
+        "2026-10-12",
+        "2026-11-02",
+        "2026-11-15",
+        "2026-12-25",
+        "2027-01-01"
+      ]
+    },
+    {
+      "id": "reference",
+      "holidays": [
+        "2026-01-01",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-04-03",
+        "2026-04-21",
+        "2026-05-01",
+        "2026-06-04",
+        "2026-09-07",
+        "2026-10-12",
+        "2026-11-02",
+        "2026-11-15",
+        "2026-11-20",
+        "2026-12-25",
+        "2027-01-01"
+      ]
+    }
+  ]
+}
