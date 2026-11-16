@@ -1,6 +1,7 @@
 package com.fourmint.reconciliation.domain;
 import com.fourmint.platform.Resource;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -215,7 +216,7 @@ public final class Models {
             com.fourmint.platform.Checks.id(id);
             required(date, "date");
             nonNegative(progress, "progress");
-            if (progress.compareTo(BigDecimal.valueOf(100)) > 0) throw new IllegalArgumentException("progress must be <= 100");
+            if (progress.setScale(0, RoundingMode.HALF_UP).intValue() > 100) throw new IllegalArgumentException("progress must be <= 100");
         }
     }
 
